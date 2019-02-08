@@ -345,4 +345,8 @@ export async function manifestCheck(): Promise<void> {
     // We only want to error if we KNOW that the gcm_sender_id is incorrect.
     return;
   }
+
+  if(!manifestContent){
+    return;
+  }
 }
