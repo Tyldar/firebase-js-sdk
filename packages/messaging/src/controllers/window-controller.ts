@@ -345,12 +345,4 @@ export async function manifestCheck(): Promise<void> {
     // We only want to error if we KNOW that the gcm_sender_id is incorrect.
     return;
   }
-
-  if (!manifestContent || !manifestContent.gcm_sender_id) {
-    return;
-  }
-
-  if (manifestContent.gcm_sender_id !== '103953800507') {
-    throw errorFactory.create(ERROR_CODES.INCORRECT_GCM_SENDER_ID);
-  }
 }
